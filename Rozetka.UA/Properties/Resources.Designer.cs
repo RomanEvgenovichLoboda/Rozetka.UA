@@ -623,6 +623,16 @@ namespace Rozetka.UA.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bag_100px {
+            get {
+                object obj = ResourceManager.GetObject("bag_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap canon {
             get {
                 object obj = ResourceManager.GetObject("canon", resourceCulture);
@@ -826,6 +836,16 @@ namespace Rozetka.UA.Properties {
         internal static System.Drawing.Bitmap setevoe_oborudovanie {
             get {
                 object obj = ResourceManager.GetObject("setevoe_oborudovanie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart_100px {
+            get {
+                object obj = ResourceManager.GetObject("shopping_cart_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

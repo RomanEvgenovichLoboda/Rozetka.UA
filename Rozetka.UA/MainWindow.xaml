@@ -5,7 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rozetka.UA"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="900">
+        Title="Rozetka" Height="600" Width="900">
+    <Window.Resources>
+        <Style TargetType="RadioButton" x:Key="radioBut">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Background" Value="Gray"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <ScrollViewer>
             <Grid>
@@ -24,17 +31,19 @@
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition ></RowDefinition>
-                    
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" FontWeight="DemiBold"  FontSize="20" Margin="50,0" >Компьютеры и ноутбуки</TextBlock>
                 <Grid Grid.Row="1">
-
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition Width="4*"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="1" Margin="50,50,50,0" Source="Resources/266429718.jpg"></Image>
+                    <Image RenderOptions.BitmapScalingMode="Fant" x:Name="banner" Grid.Column="1" Margin="50,50,50,0" Source="Resources/266429718.jpg"></Image>
+                    <!--<Frame Grid.Column="1" 
+                           Content="{Binding CurentPage}"
+                           Opacity="{Binding FrameOpacity}"
+                           ></Frame>-->
                 </Grid>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
@@ -43,12 +52,12 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="1" Orientation="Horizontal">
-                        <RadioButton Margin="5"></RadioButton>
-                        <RadioButton Margin="5"></RadioButton>
-                        <RadioButton Margin="5"></RadioButton>
-                        <RadioButton Margin="5"></RadioButton>
-                        <RadioButton Margin="5"></RadioButton>
-                        <RadioButton Margin="5"></RadioButton>
+                        <RadioButton Checked="RB_Checked" x:Name="rb1" Style="{StaticResource radioBut}"></RadioButton>
+                        <RadioButton Checked="RB_Checked" x:Name="rb2" Style="{StaticResource radioBut}"></RadioButton>
+                        <RadioButton Click="RB_Checked" x:Name="rb3" Style="{StaticResource radioBut}"></RadioButton>
+                        <RadioButton Click="RB_Checked" x:Name="rb4" Style="{StaticResource radioBut}"></RadioButton>
+                        <RadioButton Click="RB_Checked" x:Name="rb5" Style="{StaticResource radioBut}"></RadioButton>
+                        <RadioButton Click="RB_Checked" x:Name="rb6" Style="{StaticResource radioBut}"></RadioButton>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="4">
@@ -130,7 +139,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="1">
                         <Image Source="Resources/noutbuki.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Ноутбуки</TextBlock>
+                        <Label HorizontalAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Ноутбуки</Label>
                     </StackPanel>
                     <StackPanel Grid.Column="2">
                         <Image Source="Resources/kompyutery.png" Margin="10"></Image>
@@ -166,27 +175,61 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="1">
                         <Image Source="Resources/kompyuternye-komplektuyushchie.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Компьютерные комплектующие</TextBlock>
+                        <TextBlock FontSize="15" Margin="0,5" Foreground="#FF3E86AF" TextWrapping="Wrap">Компьютерные комплектующие</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Системы охлаждения</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Видеокарты</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Оперативная память</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Процессоры</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Материнские платы</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Жесткие диски и дисковые массивы</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Блоки питания</TextBlock>
                     </StackPanel>
                     <StackPanel Grid.Column="2">
                         <Image Source="Resources/setevoe-oborudovanie.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Сетевое оборудование</TextBlock>
+                        <TextBlock Margin="0,5" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Сетевое оборудование</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Маршрутизаторы</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Коммутаторы</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Сетевые адаптеры</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Пассивное сетевое оборудование</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Беспроводные точки доступа</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Ретрансляторы Wi-Fi</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Патч-корды</TextBlock>
                     </StackPanel>
                     <StackPanel Grid.Column="3">
                         <Image Source="Resources/naushniki-i-aksessuary.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Наушники и аксессуары</TextBlock>
+                        <TextBlock Margin="0,5" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Наушники и аксессуары</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Наушники</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Усилители для наушников</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Аксессуары для наушников</TextBlock>
                     </StackPanel>
                     <StackPanel Grid.Column="4">
                         <Image Source="Resources/klaviatury-i-myshi.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Клавиатуры и мыши</TextBlock>
+                        <TextBlock Margin="0,5" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Клавиатуры и мыши</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Компьютерные мыши</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Игровые поверхности</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Клавиатуры</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Комплект: клавиатура и мышь</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Аксессуары для клавиатур и мышек</TextBlock>
                     </StackPanel>
                     <StackPanel Grid.Column="5">
                         <Image Source="Resources/aksessuari-dlia-elektronyky.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Аксессуары для электроники</TextBlock>
+                        <TextBlock Margin="0,5" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Аксессуары для электроники</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Флеш память USB</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Хабы и кардридеры</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Аксессуары для ПК и ноутбуков</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Комплектующие для ноутбуков</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Сетевые фильтры, адаптеры и удлинители</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Чехлы для планшетов</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Сумки, рюкзаки и чехлы для ноутбуков</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Чистящие средства</TextBlock>
                     </StackPanel>
                     <StackPanel Grid.Column="6">
                         <Image Source="Resources/ofisnaya-tekhnika.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Оргтехника</TextBlock>
+                        <TextBlock Margin="0,5" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Оргтехника</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">МФУ/Принтеры</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Сканеры</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Расходные материалы для принтеров</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#FF3E86AF" TextWrapping="Wrap">Доски, флипчарты</TextBlock>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="10">
@@ -226,7 +269,6 @@
                     </StackPanel>
                 </Grid>
                 <TextBlock Grid.Row="12" FontWeight="DemiBold"  FontSize="20" Margin="50,0" >Популярные товары</TextBlock>
-
                 <Grid Grid.Row="13">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"></ColumnDefinition>
@@ -236,31 +278,73 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition Width="50"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="1">
-                        <Image Source="Resources/11087636.jpg" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" TextWrapping="Wrap">KVM-переключатель ATEN CS22U-A7 2-</TextBlock>
+                        <Image Source="Resources/11087636.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15" TextWrapping="Wrap">KVM-переключатель ATEN CS22U-A7 2-</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">719 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="2">
-                        <Image Source="Resources/programmnoe-obespechenie.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Програмное обеспечение</TextBlock>
+                        <Image Source="Resources/247573749.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15"  TextWrapping="Wrap">Монитор 27" Dell S2722DC (210-BBRR)</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" TextWrapping="Wrap">12 499 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="3">
-                        <Image Source="Resources/graficheskie-planshety.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Графические процессоры</TextBlock>
+                        <Image Source="Resources/244859893.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15" TextWrapping="Wrap">Компьютер Artline Gaming X51 v07</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">28 999 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="4">
-                        <Image Source="Resources/mikrofony.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Микрофоны</TextBlock>
+                        <Image Source="Resources/249055017.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock  FontSize="15"  TextWrapping="Wrap">Компьютер Huawei MateStation S Windows</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">13 599 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="5">
-                        <Image Source="Resources/servernoe-oborudovanie.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Серверное оборудование</TextBlock>
+                        <Image Source="Resources/236960588.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15" TextWrapping="Wrap">Компьютер ARTLINE Gaming X33 v14</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">25 299 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="6">
-                        <Image Source="Resources/interaktivnoe-oborudovanie.png" Margin="10"></Image>
-                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Интерактивное оборудование</TextBlock>
+                        <Image Source="Resources/163386254.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15" TextWrapping="Wrap">Ноутбук Acer Aspire 7 A715-42G-R0VS</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">26 999 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Column="7">
+                        <Image Source="Resources/247677447.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15" TextWrapping="Wrap">Компьютер Asus S500MC-5114000380</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">40 599 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Column="8">
+                        <Image Source="Resources/10957834.jpg" Height="100" Margin="10"></Image>
+                        <TextBlock FontSize="15" TextWrapping="Wrap">Kingston SSDNow A400 240GB 2.5" SATAIII 3D</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="20" TextWrapping="Wrap">1 119 ₴</TextBlock>
+                            <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
             </Grid>
