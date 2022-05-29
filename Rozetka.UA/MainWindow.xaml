@@ -1,0 +1,269 @@
+﻿<Window x:Class="Rozetka.UA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rozetka.UA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="900">
+    <Grid>
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" FontWeight="DemiBold"  FontSize="20" Margin="50,0" >Компьютеры и ноутбуки</TextBlock>
+                <Grid Grid.Row="1">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="1" Margin="50,50,50,0" Source="Resources/266429718.jpg"></Image>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <RadioButton Margin="5"></RadioButton>
+                        <RadioButton Margin="5"></RadioButton>
+                        <RadioButton Margin="5"></RadioButton>
+                        <RadioButton Margin="5"></RadioButton>
+                        <RadioButton Margin="5"></RadioButton>
+                        <RadioButton Margin="5"></RadioButton>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/apple.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="2" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/asus.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="3" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/hp.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="4" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/acer.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="5" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/lenovo.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="6" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/samsung.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="7" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/dell.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="8" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/canon.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="9" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/tp-link.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Grid.Column="10" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/logitech.jpg" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1">
+                        <Image Source="Resources/noutbuki.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Ноутбуки</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Image Source="Resources/kompyutery.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Компьютери</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
+                        <Image Source="Resources/monitory.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Мониторы</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="4">
+                        <Image Source="Resources/tovary-dlya-gejmerov.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Gaming</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5">
+                        <Image Source="Resources/planshety.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Планшеты</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="6">
+                        <Image Source="Resources/kabeli-i-perekhodniki.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF">Кабели и переходники</TextBlock>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1">
+                        <Image Source="Resources/kompyuternye-komplektuyushchie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Компьютерные комплектующие</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Image Source="Resources/setevoe-oborudovanie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Сетевое оборудование</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
+                        <Image Source="Resources/naushniki-i-aksessuary.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Наушники и аксессуары</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="4">
+                        <Image Source="Resources/klaviatury-i-myshi.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Клавиатуры и мыши</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5">
+                        <Image Source="Resources/aksessuari-dlia-elektronyky.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Аксессуары для электроники</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="6">
+                        <Image Source="Resources/ofisnaya-tekhnika.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Оргтехника</TextBlock>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1">
+                        <Image Source="Resources/akusticheskie-sistemy.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Акустические системы</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Image Source="Resources/programmnoe-obespechenie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Програмное обеспечение</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
+                        <Image Source="Resources/graficheskie-planshety.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Графические процессоры</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="4">
+                        <Image Source="Resources/mikrofony.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Микрофоны</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5">
+                        <Image Source="Resources/servernoe-oborudovanie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Серверное оборудование</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="6">
+                        <Image Source="Resources/interaktivnoe-oborudovanie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Интерактивное оборудование</TextBlock>
+                    </StackPanel>
+                </Grid>
+                <TextBlock Grid.Row="12" FontWeight="DemiBold"  FontSize="20" Margin="50,0" >Популярные товары</TextBlock>
+
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1">
+                        <Image Source="Resources/11087636.jpg" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" TextWrapping="Wrap">KVM-переключатель ATEN CS22U-A7 2-</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Image Source="Resources/programmnoe-obespechenie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Програмное обеспечение</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
+                        <Image Source="Resources/graficheskie-planshety.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Графические процессоры</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="4">
+                        <Image Source="Resources/mikrofony.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Микрофоны</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5">
+                        <Image Source="Resources/servernoe-oborudovanie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Серверное оборудование</TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="6">
+                        <Image Source="Resources/interaktivnoe-oborudovanie.png" Margin="10"></Image>
+                        <TextBlock TextAlignment="Center" FontSize="15" Foreground="#FF3E86AF" TextWrapping="Wrap">Интерактивное оборудование</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
