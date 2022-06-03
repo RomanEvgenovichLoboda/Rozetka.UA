@@ -9,7 +9,7 @@
     <Window.Resources>
         <Style TargetType="RadioButton" x:Key="radioBut">
             <Setter Property="Margin" Value="5"></Setter>
-            <Setter Property="Background" Value="Gray"></Setter>
+            <Setter Property="Background" Value="Green"></Setter>
             <Setter Property="BorderThickness" Value="0"></Setter>
         </Style>
         <Style TargetType="TextBlock" x:Key="blue">
@@ -22,9 +22,19 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style TargetType="TextBlock" x:Key="black">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
         <Style TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
         </Style>
         
         
@@ -316,7 +326,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="1">
                         <Image Source="Resources/11087636.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" Foreground="Black"  Style="{StaticResource blue}">KVM-переключатель ATEN CS22U-A7 2-</TextBlock>
+                        <TextBlock Style="{StaticResource black}">KVM-переключатель ATEN CS22U-A7 2-</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">719 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -324,7 +334,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="2">
                         <Image Source="Resources/247573749.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" Foreground="Black"  Style="{StaticResource blue}">Монитор 27" Dell S2722DC (210-BBRR)</TextBlock>
+                        <TextBlock Style="{StaticResource black}">Монитор 27" Dell S2722DC (210-BBRR)</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" TextWrapping="Wrap">12 499 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -332,7 +342,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="3">
                         <Image Source="Resources/244859893.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" Foreground="Black"  Style="{StaticResource blue}">Компьютер Artline Gaming X51 v07</TextBlock>
+                        <TextBlock Style="{StaticResource black}">Компьютер Artline Gaming X51 v07</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">28 999 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -340,7 +350,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="4">
                         <Image Source="Resources/249055017.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock  FontSize="15" Foreground="Black" Style="{StaticResource blue}">Компьютер Huawei MateStation S Windows</TextBlock>
+                        <TextBlock  Style="{StaticResource black}">Компьютер Huawei MateStation S Windows</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">13 599 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -348,7 +358,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="5">
                         <Image Source="Resources/236960588.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" Foreground="Black"  Style="{StaticResource blue}">Компьютер ARTLINE Gaming X33 v14</TextBlock>
+                        <TextBlock Style="{StaticResource black}">Компьютер ARTLINE Gaming X33 v14</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">25 299 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -356,7 +366,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="6">
                         <Image Source="Resources/163386254.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" Foreground="Black"  Style="{StaticResource blue}">Ноутбук Acer Aspire 7 A715-42G-R0VS</TextBlock>
+                        <TextBlock Style="{StaticResource black}">Ноутбук Acer Aspire 7 A715-42G-R0VS</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">26 999 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -364,7 +374,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="7">
                         <Image Source="Resources/247677447.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" Foreground="Black"  Style="{StaticResource blue}">Компьютер Asus S500MC-5114000380</TextBlock>
+                        <TextBlock Style="{StaticResource black}">Компьютер Asus S500MC-5114000380</TextBlock>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontSize="20" Foreground="Red" TextWrapping="Wrap">40 599 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
@@ -372,9 +382,9 @@
                     </StackPanel>
                     <StackPanel Grid.Column="8">
                         <Image Source="Resources/10957834.jpg" Height="100" Margin="10"></Image>
-                        <TextBlock FontSize="15" TextWrapping="Wrap">Kingston SSDNow A400 240GB 2.5" SATAIII 3D</TextBlock>
+                        <TextBlock Style="{StaticResource black}">Kingston SSDNow A400 240GB 2.5" SATAIII 3D</TextBlock>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontSize="20" Foreground="Black"  Style="{StaticResource blue}">1 119 ₴</TextBlock>
+                            <TextBlock FontSize="20" Foreground="Red">1 119 ₴</TextBlock>
                             <Image Height="20" Margin="10,0,0,0" Source="Resources/shopping_cart_100px.png"></Image>
                         </StackPanel>
                     </StackPanel>
