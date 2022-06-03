@@ -32,9 +32,17 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-
+        <Style TargetType="Image" x:Key="butim">
+            <Setter Property="Opacity" Value="0.5"></Setter>
+            <Setter Property="Stretch" Value="Uniform"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="1"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
         </Style>
         
         
@@ -138,34 +146,34 @@
                         <ColumnDefinition Width="50"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="1" BorderThickness="0">
-                        <Image Source="Resources/apple.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/apple.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="2" BorderThickness="0">
-                        <Image Source="Resources/asus.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/asus.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="3" BorderThickness="0">
-                        <Image Source="Resources/hp.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/hp.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="4" BorderThickness="0">
-                        <Image Source="Resources/acer.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/acer.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="5" BorderThickness="0">
-                        <Image Source="Resources/lenovo.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/lenovo.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="6" BorderThickness="0">
-                        <Image Source="Resources/samsung.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/samsung.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="7" BorderThickness="0">
-                        <Image Source="Resources/dell.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/dell.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="8" BorderThickness="0">
-                        <Image Source="Resources/canon.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/canon.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="9" BorderThickness="0">
-                        <Image Source="Resources/tp-link.png" Stretch="Uniform"></Image>
+                        <Image Source="Resources/tp-link.png" Style="{StaticResource butim}"></Image>
                     </Button>
                     <Button Grid.Column="10" BorderThickness="0">
-                        <Image Source="Resources/logitech.jpg" Stretch="Uniform"></Image>
+                        <Image Source="Resources/logitech.jpg" Style="{StaticResource butim}"></Image>
                     </Button>
                 </Grid>
                 <Grid Grid.Row="6">
