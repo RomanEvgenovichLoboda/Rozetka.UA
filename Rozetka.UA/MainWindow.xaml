@@ -23,6 +23,11 @@
             </Style.Triggers>
         </Style>
 
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
+        
+        
         <!--<Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#FF0055FF"/>
             <Setter Property="BorderBrush" Value="DarkGray"/>
@@ -129,44 +134,28 @@
                         <Image Source="Resources/asus.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="3" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/hp.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/hp.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="4" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/acer.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/acer.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="5" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/lenovo.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/lenovo.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="6" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/samsung.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/samsung.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="7" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/dell.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/dell.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="8" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/canon.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/canon.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="9" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/tp-link.png" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/tp-link.png" Stretch="Uniform"></Image>
                     </Button>
                     <Button Grid.Column="10" BorderThickness="0">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Resources/logitech.jpg" Stretch="Uniform"/>
-                        </Button.Background>
+                        <Image Source="Resources/logitech.jpg" Stretch="Uniform"></Image>
                     </Button>
                 </Grid>
                 <Grid Grid.Row="6">
