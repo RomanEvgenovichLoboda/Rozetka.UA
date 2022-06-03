@@ -9,8 +9,17 @@
     <Window.Resources>
         <Style TargetType="RadioButton" x:Key="radioBut">
             <Setter Property="Margin" Value="5"></Setter>
-            <Setter Property="Background" Value="Green"></Setter>
+            <Setter Property="Background" Value="Gray"></Setter>
             <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="BorderBrush" Value="Green"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Background" Value="Green"></Setter>
+                    <Setter Property="BorderThickness" Value="5"></Setter>
+                    <Setter Property="Margin" Value="0"></Setter>
+                    <Setter Property="Foreground" Value="Green"></Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style TargetType="TextBlock" x:Key="blue">
             <Setter Property="FontSize" Value="12"></Setter>
@@ -33,7 +42,7 @@
             </Style.Triggers>
         </Style>
         <Style TargetType="Image" x:Key="butim">
-            <Setter Property="Opacity" Value="0.5"></Setter>
+            <Setter Property="Opacity" Value="0.3"></Setter>
             <Setter Property="Stretch" Value="Uniform"></Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
@@ -41,47 +50,6 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="Transparent"></Setter>
-        </Style>
-        
-        
-        <!--<Style TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="#FF0055FF"/>
-            <Setter Property="BorderBrush" Value="DarkGray"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="5">
-                            <ContentPresenter Content="{TemplateBinding Content}"
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              Margin="{TemplateBinding Padding}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="WhiteSmoke"/>
-                                <Setter Property="Opacity" Value="1"></Setter>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Opacity" Value="0"></Setter>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
-
-
-
     </Window.Resources>
     <Grid>
         <ScrollViewer>
@@ -89,7 +57,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition ></RowDefinition>
                     <RowDefinition></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
                     <RowDefinition Height="20"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
@@ -109,11 +77,7 @@
                         <ColumnDefinition Width="4*"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Image RenderOptions.BitmapScalingMode="Fant" x:Name="banner" Grid.Column="1" Margin="50,50,50,0" Source="Resources/266429718.jpg"></Image>
-                    <!--<Frame Grid.Column="1" 
-                           Content="{Binding CurentPage}"
-                           Opacity="{Binding FrameOpacity}"
-                           ></Frame>-->
+                    <Image  x:Name="banner" Grid.Column="1" Margin="50,50,50,0" Source="Resources/266429718.jpg"></Image>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
@@ -145,36 +109,16 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition Width="50"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="1" BorderThickness="0">
-                        <Image Source="Resources/apple.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="2" BorderThickness="0">
-                        <Image Source="Resources/asus.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="3" BorderThickness="0">
-                        <Image Source="Resources/hp.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="4" BorderThickness="0">
-                        <Image Source="Resources/acer.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="5" BorderThickness="0">
-                        <Image Source="Resources/lenovo.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="6" BorderThickness="0">
-                        <Image Source="Resources/samsung.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="7" BorderThickness="0">
-                        <Image Source="Resources/dell.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="8" BorderThickness="0">
-                        <Image Source="Resources/canon.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="9" BorderThickness="0">
-                        <Image Source="Resources/tp-link.png" Style="{StaticResource butim}"></Image>
-                    </Button>
-                    <Button Grid.Column="10" BorderThickness="0">
-                        <Image Source="Resources/logitech.jpg" Style="{StaticResource butim}"></Image>
-                    </Button>
+                    <Image Grid.Column="1" Source="Resources/apple.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="2" Source="Resources/asus.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="3" Source="Resources/hp.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="4" Source="Resources/acer.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="5" Source="Resources/lenovo.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="6" Source="Resources/samsung.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="7" Source="Resources/dell.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="8" Source="Resources/canon.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="9" Source="Resources/tp-link.png" Style="{StaticResource butim}"></Image>
+                    <Image Grid.Column="10" Source="Resources/logitech.jpg" Style="{StaticResource butim}"></Image>
                 </Grid>
                 <Grid Grid.Row="6">
                     <Grid.ColumnDefinitions>
